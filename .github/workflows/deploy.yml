@@ -1,0 +1,15 @@
+name: Deploy Workflow
+
+on:
+  push:
+    branches:
+      - deploy-release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+      - name: Imprimir mensaje
+        run: echo "El workflow se ha ejecutado correctamente"
